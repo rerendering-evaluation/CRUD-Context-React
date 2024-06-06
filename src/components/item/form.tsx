@@ -8,12 +8,11 @@ import { SaveIcon } from "../icons/save";
 import { CloseIcon } from "../icons/close";
 import { useContextHook } from '../../context/hook';
 import { memo } from 'react';
-
 const InputMemo = memo(Input);
-
 export const ItemForm = ({
   ...item
 }: IItem) => {
+  console.log(window.globalCount++);
   const {
     toggleIsEditing,
     editItem

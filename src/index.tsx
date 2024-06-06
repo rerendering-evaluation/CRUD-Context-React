@@ -13,3 +13,10 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+declare global {         
+  interface Window {         
+    globalCount: number;         
+  }         
+}
+
+window.globalCount = 0;

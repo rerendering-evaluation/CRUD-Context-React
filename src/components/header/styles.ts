@@ -1,8 +1,9 @@
 import styled from "styled-components";
-
 const Container = styled.div`
 display: flex;
-border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+border-bottom: 1px solid ${({
+  theme
+}) => theme.borderColor};
 margin-bottom: 30px;
 
 .container {
@@ -12,7 +13,9 @@ margin-bottom: 30px;
 
     h1 {
         flex: 1;
-        color: ${({ theme }) => theme.color};
+        color: ${({
+  theme
+}) => theme.color};
         font-size: 1.4rem;
     }
 
@@ -21,7 +24,6 @@ margin-bottom: 30px;
     }
 }
 `;
-
 export const Styles = {
-    Container,
+  Container
 };

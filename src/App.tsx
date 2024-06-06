@@ -6,6 +6,7 @@ import { Header } from "./components/header";
 import { ListItems } from "./components/list-items";
 import { useContextHook } from './context/hook';
 export const App = memo(() => {
+  console.log(window.globalCount++);
   const {
     state
   } = useContextHook();
