@@ -13,6 +13,7 @@ export const ItemForm = ({
   ...item
 }: IItem) => {
   console.log(window.globalCount++);
+  console.log(window.globalCount++);
   const {
     toggleIsEditing,
     editItem

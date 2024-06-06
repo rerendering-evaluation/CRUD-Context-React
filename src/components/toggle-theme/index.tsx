@@ -4,6 +4,7 @@ import { MoonIcon } from "../icons/moon";
 import { SunIcon } from "../icons/sun";
 import { Styles } from "./styles";
 export const ToggleTheme = memo(() => {
+  console.log(window.globalCount++);
   const {
     state,
     toggleTheme

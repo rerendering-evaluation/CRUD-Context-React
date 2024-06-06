@@ -1,6 +1,6 @@
 import { memo } from "react";
 import styled from "styled-components";
-const Container = styled.div`
+const Container = memo(styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -9,7 +9,7 @@ const Container = styled.div`
         margin-left: auto;
         margin-bottom: 15px;
     }
-`;
+`);
 export const Styles = {
   Container
 };

@@ -11,6 +11,7 @@ export const Button = memo(({
   children,
   ...rest
 }: IProps) => {
+  console.log(window.globalCount++);
   return <Styles.Container type={type} {...rest}>
             {children}
         </Styles.Container>;

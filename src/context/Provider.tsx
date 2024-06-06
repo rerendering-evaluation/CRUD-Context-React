@@ -10,6 +10,7 @@ export const Provider = ({
   children
 }: IProps) => {
   console.log(window.globalCount++);
+  console.log(window.globalCount++);
   const [state, dispatch] = useReducer(Reducer, INITIAL_STATE);
   const toggleTheme = useCallback(() => dispatch({
     type: AppContextActions.ToggleTheme

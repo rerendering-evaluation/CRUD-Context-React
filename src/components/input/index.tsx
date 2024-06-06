@@ -18,6 +18,7 @@ export const Input = memo(({
   autoFocus = false,
   value
 }: IProps) => {
+  console.log(window.globalCount++);
   return <Styles.Container>
             {!!label && <Styles.Label htmlFor={type}>{label}</Styles.Label>}
             <Styles.Input placeholder={placeholder ?? label} type={type} name={name} id={type} autoComplete='off' autoFocus={autoFocus} value={value} {...!!onChangeText && {

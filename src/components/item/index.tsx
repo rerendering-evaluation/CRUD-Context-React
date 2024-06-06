@@ -17,14 +17,13 @@ export const Item = ({
   id,
   isEditing = false
 }: IProps) => {
+  console.log(window.globalCount++);
   const {
     deleteItem,
     toggleIsEditing
   } = useContextHook();
-  
   const fn1 = useCallback(() => toggleIsEditing(id), []);
-  const fn2 = useCallback(() => deleteItem(id), [])
-
+  const fn2 = useCallback(() => deleteItem(id), []);
   return <Styles.Container>
             <strong>{position}</strong>
             {isEditing ? <ItemForm {...{

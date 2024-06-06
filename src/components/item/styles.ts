@@ -1,7 +1,7 @@
 import { memo } from "react";
 import styled from "styled-components";
 import { Styles as InputStyles } from "../input/styles";
-const Container = styled.div`
+const Container = memo(styled.div`
     display: flex;
     align-items: center;
     padding: 15px 10px;
@@ -30,8 +30,8 @@ const Container = styled.div`
             margin-right: 30px;
         }
     }
-`;
-const GroupButtons = styled.div`
+`);
+const GroupButtons = memo(styled.div`
     display: flex;
 
     > button {
@@ -39,7 +39,7 @@ const GroupButtons = styled.div`
             margin-right: 10px;
         }
     }
-`;
+`);
 export const Styles = {
   Container,
   GroupButtons
