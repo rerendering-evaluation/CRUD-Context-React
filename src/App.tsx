@@ -4,15 +4,13 @@ import { Container, GlobalStyles } from "./styles/global";
 import { theme } from "./config/theme";
 import { Header } from "./components/header";
 import { ListItems } from "./components/list-items";
-import { useContextHook } from './context/hook';
+import { useContextHook } from "./context/hook";
 export const App = memo(() => {
   console.log(window.globalCount++);
-  console.log(window.globalCount++);
-  const {
-    state
-  } = useContextHook();
+  const { state } = useContextHook();
   const currentTheme = (theme as any)[state.themeName];
-  return <ThemeProvider theme={currentTheme}>
+  return (
+    <ThemeProvider theme={currentTheme}>
       <>
         <GlobalStyles />
         <Header />
@@ -20,5 +18,6 @@ export const App = memo(() => {
           <ListItems />
         </Container>
       </>
-    </ThemeProvider>;
+    </ThemeProvider>
+  );
 });
