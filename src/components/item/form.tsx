@@ -7,6 +7,10 @@ import { Input } from "../input";
 import { SaveIcon } from "../icons/save";
 import { CloseIcon } from "../icons/close";
 import { useContextHook } from '../../context/hook';
+import { memo } from 'react';
+
+const InputMemo = memo(Input);
+
 export const ItemForm = ({
   ...item
 }: IItem) => {
@@ -22,15 +26,15 @@ export const ItemForm = ({
     id
   } = formState || {};
   return <>
-            <Input name="nickname" placeholder="Nickname" onChangeText={useCallback(v => setFormState(old => ({
+            <InputMemo name="nickname" placeholder="Nickname" onChangeText={useCallback(v => setFormState(old => ({
       ...old,
       nickname: v
     })), [setFormState])} value={nickname} autoFocus />
-            <Input name="age" placeholder="Age" type="number" onChangeText={useCallback(v => setFormState(old => ({
+            <InputMemo name="age" placeholder="Age" type="number" onChangeText={useCallback(v => setFormState(old => ({
       ...old,
       age: ~~v
     })), [setFormState])} value={age} />
-            <Input name="whatsapp" placeholder="Whatsapp number" type="number" onChangeText={useCallback(v => setFormState(old => ({
+            <InputMemo name="whatsapp" placeholder="Whatsapp number" type="number" onChangeText={useCallback(v => setFormState(old => ({
       ...old,
       whatsapp: ~~v
     })), [setFormState])} value={whatsapp} />

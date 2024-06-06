@@ -21,6 +21,10 @@ export const Item = ({
     deleteItem,
     toggleIsEditing
   } = useContextHook();
+  
+  const fn1 = useCallback(() => toggleIsEditing(id), []);
+  const fn2 = useCallback(() => deleteItem(id), [])
+
   return <Styles.Container>
             <strong>{position}</strong>
             {isEditing ? <ItemForm {...{
@@ -35,10 +39,10 @@ export const Item = ({
                             <p>{whatsapp ?? <i>Insert phone</i>}</p>
 
                             <Styles.GroupButtons>
-                                <Button onClick={useCallback(() => toggleIsEditing(id), [])}>
+                                <Button onClick={fn1}>
                                     <PencilIcon />
                                 </Button>
-                                <Button onClick={useCallback(() => deleteItem(id), [])}>
+                                <Button onClick={fn2}>
                                     <TrashIcon />
                                 </Button>
                             </Styles.GroupButtons>
