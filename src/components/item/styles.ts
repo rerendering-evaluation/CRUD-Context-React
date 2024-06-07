@@ -1,21 +1,26 @@
+import { memo } from "react";
 import styled from "styled-components";
-
 import { Styles as InputStyles } from "../input/styles";
-
 const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 15px 10px;
-    border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+    border-bottom: 1px solid ${({
+  theme
+}) => theme.borderColor};
 
     > strong {
         width: 40px;
-        color: ${({ theme }) => theme.color};
+        color: ${({
+  theme
+}) => theme.color};
     }
 
     > p {
         flex: 1;
-        color: ${({ theme }) => theme.color};
+        color: ${({
+  theme
+}) => theme.color};
     }
 
     > ${InputStyles.Container} {
@@ -26,7 +31,6 @@ const Container = styled.div`
         }
     }
 `;
-
 const GroupButtons = styled.div`
     display: flex;
 
@@ -36,8 +40,7 @@ const GroupButtons = styled.div`
         }
     }
 `;
-
 export const Styles = {
-    Container,
-    GroupButtons,
+  Container,
+  GroupButtons
 };

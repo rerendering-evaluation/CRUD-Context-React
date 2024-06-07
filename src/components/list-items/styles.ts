@@ -1,5 +1,5 @@
+import { memo } from "react";
 import styled from "styled-components";
-
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -10,7 +10,6 @@ const Container = styled.div`
         margin-bottom: 15px;
     }
 `;
-
 export const Styles = {
-    Container,
+  Container
 };
