@@ -3,9 +3,10 @@ import { Container, GlobalStyles } from "./styles/global";
 import { theme } from "./config/theme";
 import { Header } from "./components/header";
 import { ListItems } from "./components/list-items";
-import { useContextHook } from './context/hook';
+import { useContextHook } from "./context/hook";
 
 export const App = () => {
+  console.log(window.globalCount++);
 
   const { state } = useContextHook();
 
@@ -21,5 +22,5 @@ export const App = () => {
         </Container>
       </>
     </ThemeProvider>
-  )
-}
+  );
+};

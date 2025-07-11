@@ -1,19 +1,20 @@
-import { useContextHook } from '../../context/hook';
+import { useContextHook } from "../../context/hook";
 import { MoonIcon } from "../icons/moon";
 import { SunIcon } from "../icons/sun";
 import { Styles } from "./styles";
 
 export const ToggleTheme = () => {
+  console.log(window.globalCount++);
 
-    const { state, toggleTheme } = useContextHook()
+  const { state, toggleTheme } = useContextHook();
 
-    return (
-        <Styles.Container onClick={toggleTheme}>
-            <Styles.Bull>
-                <Styles.Icon>
-                    {state.themeName === 'light' ? <SunIcon /> : <MoonIcon />}
-                </Styles.Icon>
-            </Styles.Bull>
-        </Styles.Container>
-    )
-}
+  return (
+    <Styles.Container onClick={toggleTheme}>
+      <Styles.Bull>
+        <Styles.Icon>
+          {state.themeName === "light" ? <SunIcon /> : <MoonIcon />}
+        </Styles.Icon>
+      </Styles.Bull>
+    </Styles.Container>
+  );
+};
